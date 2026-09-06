@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudOps Status Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div>
+            <h1>CloudOps Status Dashboard</h1>
+            <p>AWS Infrastructure Monitoring</p>
+        </div>
+
+        <div class="overall-status">
+            <span class="status-dot"></span>
+            All Systems Operational
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section>
+            <h2>Infrastructure Overview</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Application</h3>
+                        <span class="badge healthy">Healthy</span>
+                    </div>
+
+                    <p class="metric">99.9%</p>
+                    <p class="description">Application Availability</p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>EC2 Instance</h3>
+                        <span class="badge healthy">Running</span>
+                    </div>
+
+                    <p class="metric">32%</p>
+                    <p class="description">CPU Utilization</p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>S3 Storage</h3>
+                        <span class="badge healthy">Available</span>
+                    </div>
+
+                    <p class="metric">2.4 GB</p>
+                    <p class="description">Storage Used</p>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Network</h3>
+                        <span class="badge healthy">Healthy</span>
+                    </div>
+
+                    <p class="metric">18 ms</p>
+                    <p class="description">Average Latency</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>AWS Services</h2>
+
+            <div class="service-table">
+
+                <div class="table-header">
+                    <span>Service</span>
+                    <span>Status</span>
+                    <span>Region</span>
+                    <span>Last Checked</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Amazon EC2</span>
+
+                    <span class="service-status">
+                        <span class="small-dot"></span>
+                        Operational
+                    </span>
+
+                    <span>ap-south-1</span>
+                    <span>Just now</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Amazon S3</span>
+
+                    <span class="service-status">
+                        <span class="small-dot"></span>
+                        Operational
+                    </span>
+
+                    <span>ap-south-1</span>
+                    <span>Just now</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Amazon VPC</span>
+
+                    <span class="service-status">
+                        <span class="small-dot"></span>
+                        Operational
+                    </span>
+
+                    <span>ap-south-1</span>
+                    <span>Just now</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>Amazon CloudWatch</span>
+
+                    <span class="service-status">
+                        <span class="small-dot"></span>
+                        Operational
+                    </span>
+
+                    <span>ap-south-1</span>
+                    <span>Just now</span>
+                </div>
+
+
+                <div class="table-row">
+                    <span>IAM</span>
+
+                    <span class="service-status">
+                        <span class="small-dot"></span>
+                        Operational
+                    </span>
+
+                    <span>Global</span>
+                    <span>Just now</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>System Metrics</h2>
+
+            <div class="metrics">
+
+                <div class="metric-box">
+                    <h3>CPU Utilization</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar cpu"></div>
+                    </div>
+
+                    <div class="metric-info">
+                        <span>32%</span>
+                        <span>Healthy</span>
+                    </div>
+                </div>
+
+
+                <div class="metric-box">
+                    <h3>Memory Usage</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar memory"></div>
+                    </div>
+
+                    <div class="metric-info">
+                        <span>48%</span>
+                        <span>Healthy</span>
+                    </div>
+                </div>
+
+
+                <div class="metric-box">
+                    <h3>Disk Usage</h3>
+
+                    <div class="progress">
+                        <div class="progress-bar disk"></div>
+                    </div>
+
+                    <div class="metric-info">
+                        <span>41%</span>
+                        <span>Healthy</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section>
+            <h2>Recent Events</h2>
+
+            <div class="events">
+
+                <div class="event">
+
+                    <span class="event-icon success">✓</span>
+
+                    <div>
+                        <strong>EC2 instance is running</strong>
+                        <p>Production web server is operational.</p>
+                    </div>
+
+                    <span class="time">2 min ago</span>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span class="event-icon success">✓</span>
+
+                    <div>
+                        <strong>S3 storage check completed</strong>
+                        <p>Bucket accessibility verified successfully.</p>
+                    </div>
+
+                    <span class="time">5 min ago</span>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span class="event-icon success">✓</span>
+
+                    <div>
+                        <strong>CloudWatch monitoring active</strong>
+                        <p>Infrastructure metrics are being collected.</p>
+                    </div>
+
+                    <span class="time">10 min ago</span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <div class="refresh-section">
+
+            <p>
+                Last updated:
+                <span id="lastUpdated">Just now</span>
+            </p>
+
+            <button onclick="refreshDashboard()">
+                Refresh Dashboard
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+        <p>CloudOps Status Dashboard • AWS Infrastructure Project</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
